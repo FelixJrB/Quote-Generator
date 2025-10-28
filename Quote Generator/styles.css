@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #5370f2 0%, #704699 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    max-width:550px;
+    width: 100%;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.quote-container {
+    background: white;
+    padding: 50px 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+#author-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 30px;
+    border: 5px solid #667eea;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+blockquote {
+    font-size: 1.5rem;
+    font-style: italic;
+    color: #333;
+    margin-bottom: 25px;
+    line-height: 1.7;
+    position: relative;
+}
+
+blockquote::before {
+    content: '"';
+    font-size: 3rem;
+    color: #667eea;
+    opacity: 0.3;
+    position: absolute;
+    left: -20px;
+    top: -15px;
+}
+
+#author-name {
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: #667eea;
+    margin-bottom: 5px;
+}
+
+#author-profession {
+    color: #666;
+    font-size: 1rem;
+    font-style: italic;
+}
+
+#quotebtn {
+    display: block;
+    margin: 30px auto 0;
+    padding: 15px 45px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+#quotebtn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+#quotebtn:active {
+    transform: translateY(-1px);
+}
+
+/* Responsiv design för mobiler */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .quote-container {
+        padding: 30px 25px;
+    }
+    
+    blockquote {
+        font-size: 1.1rem;
+    }
+    
+    #author-image {
+        width: 120px;
+        height: 120px;
+    }
+}
